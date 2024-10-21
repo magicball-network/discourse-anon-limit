@@ -1,0 +1,6 @@
+{{#unless this.currentUser}}
+  {{#unless this.siteSettings.anonymous_can_search}}
+    {{hide-application-header-buttons "search"}}
+  {{/unless}}
+{{/unless}}
+

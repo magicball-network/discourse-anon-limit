@@ -1,0 +1,5 @@
+search:
+  anonymous_can_search:
+    default: true
+    client: true
+
