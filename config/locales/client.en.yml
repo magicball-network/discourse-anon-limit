@@ -1,0 +1,9 @@
+en:
+  js:
+    discourse_anon_limit:
+      title: "Anon Access Limiter"
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          discourse_anon_limit: "Anonymous Access Limiter"
