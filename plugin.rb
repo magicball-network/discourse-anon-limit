@@ -1,6 +1,6 @@
 # name: discourse-anon-limit
 # about: Anonymous access limiter
-# version: 0.1
+# version: 0.2
 # authors: elmuerte
 # url: https://github.com/magicball-network/discourse-anon-limit
 
