@@ -1,18 +1,24 @@
+# frozen_string_literal: true
 
 module DiscourseAnonLimit::SearchControllerExtensions
-	def show
-		raise Discourse::InvalidAccess if current_user.nil? and !SiteSetting.anonymous_can_search
-		super
-	end
-	
-	def query
-		raise Discourse::InvalidAccess if current_user.nil? and !SiteSetting.anonymous_can_search
-		super
-	end
-	
-	def click
-		raise Discourse::InvalidAccess if current_user.nil? and !SiteSetting.anonymous_can_search
-		super
-	end
-end
+  def show
+    if current_user.nil? && !SiteSetting.anonymous_can_search
+      raise Discourse::InvalidAccess
+    end
+    super
+  end
 
+  def query
+    if current_user.nil? && !SiteSetting.anonymous_can_search
+      raise Discourse::InvalidAccess
+    end
+    super
+  end
+
+  def click
+    if current_user.nil? && !SiteSetting.anonymous_can_search
+      raise Discourse::InvalidAccess
+    end
+    super
+  end
+end
